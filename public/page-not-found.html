@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>404 - Hyderite</title>
+    <style>
+      @media all and (max-width: 480px) {
+        #error-message {
+          width: 80% !important;
+        }
+      }
+      #error-message {
+        width: 600px;
+        height: 150px;
+        background-color: #f0f0f0;
+        color: #000;
+        display: table;
+        padding: 0;
+        margin-left: auto;  
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: 20%;
+        border-radius: 6px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 15px;
+        position: absolute;
+        outline: #a0a0a0 1px solid;
+      }
+      #drag {
+        background-color: #fff;
+        border-radius: 6px 6px 0 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        height: 17px;
+      }
+
+      #close-parent {
+        position: absolute;
+        right: 0;
+        bottom: 120px;
+      }
+
+      #close {
+        display: flex;
+        justify-items: center;
+        position: relative;
+        padding-right: 0;
+        left: 0px;
+        top: -5px;
+        height: 25px;
+        border-top-right-radius: 6px;
+        transition: .25s;
+      }
+
+      #close:hover {
+        background-color: #c42b1c;
+      }
+
+      #cross-img {
+        fill: #000;
+        transform: translate(60px, 50px);
+      }
+      
+      #home {
+        width: auto;
+        padding: 2px 25px 2px 25px;
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+        border: 1px solid #0078d4;
+        border-radius: 4px;
+        right: 0;
+        margin-right: 20px;
+        margin-top: 85px;
+        position: absolute;
+      }
+
+      #home:hover {
+        transition: .15s;
+        background-color: #d8e6f1;
+      }
+
+      #home:active {
+        transition: .15s;
+        border: 1px solid #e2e2e2;
+        background-color: #f3f3f3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <button id="mob-nav-btn">☰</button>
+      <button id="cross">
+        <img src="/images/cross.png" style="width: 20px; aspect-ratio: 1;" />
+      </button>
+      <a href="/" rel="nofollow noreferrer noopener">
+        <img src="/images/logo_nobg.png" id="nav-img" draggable="false" />
+      </a>
+      <div id="pc-nav-btn">
+        <a href="/" id="nav-btn">Home</a>
+        <a href="/projects/" id="nav-btn">Projects</a>
+        <a href="#footer" id="nav-btn">Socials</a>   
+        <a href="/comms" id="nav-btn">Commissions</a>
+      </div>
+    </div>
+    <div id="mob-navbar">
+      <a href="/" id="nav-btn">Home</a>
+      <a href="/projects/" id="nav-btn">Projects</a>
+      <a href="#footer" id="nav-btn">Socials</a>   
+      <a href="/comms" id="nav-btn">Commissions</a>
+    </div>
+    <div class="not-found-body">
+      <div id="error-message">
+        <div id="drag">
+          <p style="margin-top: 0;">404 Page not found</p>
+          <div id="close-parent">
+            <a href="#" rel="nofollow noreferrer noopener" id="close">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" x="5px" y="-5px" viewBox="0 0 200 200" xml:space="preserve">
+	              <path id="cross-img" d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0 c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096 c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476 c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62 s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z"/>
+               </svg>
+            </a>
+          </div>
+        </div>
+        <img src="/images/win-cross.png" style="margin-left: 35px; margin-top: 30px; width: 50px; height: 50px;" draggable="false" />
+        <p style="left: 100px; bottom: 45px; position: absolute; word-wrap: break-word;">You got lost.</p>
+        <a href="/" rel="nofollow noreferrer noopener" id="home">Home</a>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
