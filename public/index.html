@@ -23,7 +23,8 @@
 <body>
     <div id="vscode-ui">
         <div id="top-bar">
-            <img src="https://cdn.hyderite.dev/img/vscode.png" title="vscode" alt="vscode" id="vscode-logo">
+            <img src="https://cdn.hyderite.dev/img/vscode/vscode.png" title="vscode" alt="vscode" id="vscode-logo"
+                draggable="false">
             <a href="javascript:" class="menu-btn">File</a>
             <a href="javascript:" class="menu-btn">Edit</a>
             <a href="javascript:" class="menu-btn">Selection</a>
@@ -42,19 +43,71 @@
                         style="font-size: 17.5px !important; margin-right: 2.5px;">search</span>Hyderite</div>
             </div>
             <div style="position: absolute; right: 0;">
-                <img src="https://cdn.hyderite.dev/img/minimize.png"
-                    style="padding: 17px 18px; transform: translateY(2px);" class="right-top-btn">
-                <img src="https://cdn.hyderite.dev/img/maximize.png"
-                    style="padding: 12px 18px; transform: translateY(2px);" class="right-top-btn">
-                <img src="https://cdn.hyderite.dev/img/close.png"
-                    style="padding: 12px 18px; transform: translateY(2px);" class="right-top-btn right-top-btn-close">
+                <img src="https://cdn.hyderite.dev/img/vscode/minimize.png"
+                    style="padding: 17px 18px; transform: translateY(2px);" draggable="false" class="right-top-btn">
+                <img src="https://cdn.hyderite.dev/img/vscode/maximize.png"
+                    style="padding: 12px 18px; transform: translateY(2px);" draggable="false" class="right-top-btn">
+                <img src="https://cdn.hyderite.dev/img/vscode/close.png"
+                    style="padding: 12px 18px; transform: translateY(2px);" draggable="false"
+                    class="right-top-btn right-top-btn-close">
             </div>
         </div>
         <div id="sidebar">
-            <img src="https://cdn.hyderite.dev/img/sidebar.png" style="cursor: pointer;">
+            <img src="https://cdn.hyderite.dev/img/vscode/sidebar.png" draggable="false" style="cursor: pointer;">
+            <img src="https://cdn.hyderite.dev/img/vscode/sidebar-bottom.png" draggable="false"
+                style="cursor: pointer; position: absolute; bottom: calc(21px); left: 0;">
         </div>
-    </div>
-    <script src="/js/script.js"></script>
+        <div id="main">
+            <div id="file-bar">
+                <div
+                    style="display: flex; align-items: center; width: calc(100% - 20px - 10px); height: 35px; transform: translateY(1px); font-size: 11px; color: #bbbbbb; margin-left: 20px; margin-right: 10px;">
+                    <span style="cursor: default; margin: 0;" title="Explorer (Ctrl+Shift+E)">EXPLORER</span>
+                    <span class="material-symbols-outlined" id="three-dots"
+                        title="Views and More Actions...">more_horiz</span>
+                </div>
+                <div id="files">
+                    <div
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: left; margin-left: 6px;">
+                        <span class="material-symbols-outlined">stat_minus_1</span>
+                        <span style="font-weight: bold; transform: translateY(-1px);" title="Hyderite">HYDERITE</span>
+                        <img src="https://cdn.hyderite.dev/img/vscode/explorer-btns.png" id="explorer-btns"
+                            draggable="false" style="transform: translateY(-1px);">
+                    </div>
+                    <div id="files-container">
+                        <div class="file" style="margin-top: -2px;">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                            <span title="C:\Users\Hyderite\Misc\Projects\Hyderite\node_modules">node_modules</span>
+                        </div>
+                        <div class="file">
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span title="C:\Users\Hyderite\Misc\Projects\Hyderite\public">public</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 0; width: 242px;">
+                    <div id="outline">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                        <span style="font-weight: bold; transform: translateY(-1px);" title="Outline">OUTLINE</span>
+                    </div>
+                    <div id="timeline">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                        <span style="font-weight: bold; transform: translateY(-1px);" title="Timeline">TIMELINE</span>
+                    </div>
+                </div>
+            </div>
+            <div id="code">
+                <img src="https://cdn.hyderite.dev/img/vscode/vscodelogo_dark.png" style="width: 20%; aspect-ratio: 1;"
+                    draggable="false">
+            </div>
+        </div>
+        <div id="bottom-bar">
+            <img src="https://cdn.hyderite.dev/img/vscode/bottom-bar-left.png" draggable="false"
+                style="cursor: pointer;">
+            <img src="https://cdn.hyderite.dev/img/vscode/bottom-bar-right.png" draggable="false"
+                style="cursor: pointer; position: absolute; right: 0;">
+        </div>
+        <script src="/js/script.js"></script>
+        <script src="/js/vscode-ui.js"></script>
 </body>
 
 </html>
