@@ -46,7 +46,7 @@ a {
     cursor: default;
 }
 
-.menu-btn:hover, #three-dots:hover {
+.menu-btn:hover, #three-dots:hover, .close-tab:hover {
     background-color: #2F3540;
 }
 
@@ -84,8 +84,18 @@ a {
     background-color: #3A404E;
 }
 
+.right-top-btn:active {
+    transition: none;
+    background-color: #575C68;
+}
+
 .right-top-btn-close:hover {
     background-color: #E81123;
+}
+
+.right-top-btn-close:active {
+    transition: none;
+    background-color: #951829;
 }
 
 #sidebar {
@@ -110,7 +120,9 @@ a {
 
 #three-dots {
     margin-left: auto;
+    margin-right: -20px;
     border-radius: 5px;
+    margin-top: -3px;
     cursor: pointer;
 }
 
@@ -173,7 +185,7 @@ a {
 }
 
 .file:hover {
-    background-color: #2B3245;
+    background-color: #2B3245 !important;
 }
 
 #code {
@@ -199,6 +211,45 @@ a {
 
 #index-html {
     padding-left: 27px;
+}
+
+#file-selector {
+    position: absolute;
+    background-color: #0E1525;
+    height: 36px;
+    width: 100%;
+    display: none;
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1C2333;
+    height: calc(100% - 1px);
+    transform: translateX(1px);
+    padding: 0 10px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+#index-html-tab {
+    transform: translate(1px, 1px);
+}
+
+#style-css-tab {
+    display: none;
+    transform: translate(-3px, 1px);
+}
+
+.close-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -5px;
+    margin-left: 4px;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
 }
 
 #bottom-bar {

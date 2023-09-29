@@ -106,3 +106,50 @@ document.querySelector("#package-lock-json").onclick = function (e) {
         textbox.style.display = "none";
     }, 5000);
 };
+
+document.querySelector("#style-css").onclick = function () {
+    document.querySelector("#style-css").style.backgroundColor = "#2B3245";
+    document.querySelector("#index-html").style.backgroundColor = "#1C2333";
+    document.querySelector("#script-js").style.backgroundColor = "#1C2333";
+    document.querySelector("#index-js").style.backgroundColor = "#1C2333";
+    document.querySelector("#index-html-tab").style.backgroundColor = "#0E1525";
+    document.querySelector("#index-html-tab").style.transform = "translateX(1px)";
+    document.querySelector("#style-css-tab").style.display = "inline-flex";
+    document.querySelector("#code").style.justifyContent = "normal";
+    document.querySelector("#code").style.alignItems = "normal";
+    document.querySelector("#vscode-logo-dark").style.display = "none";
+    document.querySelector("#file-selector").style.display = "block";
+};
+
+document.querySelector("#script-js").onclick = function () {
+    document.querySelector("#style-css").style.backgroundColor = "#1C2333";
+    document.querySelector("#index-html").style.backgroundColor = "#1C2333";
+    document.querySelector("#script-js").style.backgroundColor = "#2B3245";
+    document.querySelector("#index-js").style.backgroundColor = "#1C2333";
+    document.querySelector("#code").style.justifyContent = "normal";
+    document.querySelector("#code").style.alignItems = "normal";
+    document.querySelector("#vscode-logo-dark").style.display = "none";
+    document.querySelector("#file-selector").style.display = "block";
+};
+
+document.querySelector("#index-html").onclick = function () {
+    document.querySelector("#index-html").style.backgroundColor = "#2B3245";
+    document.querySelector("#style-css").style.backgroundColor = "#1C2333";
+    document.querySelector("#script-js").style.backgroundColor = "#1C2333";
+    document.querySelector("#index-js").style.backgroundColor = "#1C2333";
+    document.querySelector("#code").style.justifyContent = "normal";
+    document.querySelector("#code").style.alignItems = "normal";
+    document.querySelector("#vscode-logo-dark").style.display = "none";
+    document.querySelector("#file-selector").style.display = "block";
+};
+
+document.querySelector("#index-js").onclick = function () {
+    document.querySelector("#style-css").style.backgroundColor = "#1C2333";
+    document.querySelector("#index-html").style.backgroundColor = "#1C2333";
+    document.querySelector("#script-js").style.backgroundColor = "#1C2333";
+    document.querySelector("#index-js").style.backgroundColor = "#2B3245";
+    document.querySelector("#code").style.justifyContent = "normal";
+    document.querySelector("#code").style.alignItems = "normal";
+    document.querySelector("#vscode-logo-dark").style.display = "none";
+    document.querySelector("#file-selector").style.display = "block";
+};

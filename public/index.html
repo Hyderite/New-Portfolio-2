@@ -94,7 +94,7 @@
                                 style="border-left: #2E3646 1px solid; height: 22px; margin-right: 12px; margin-left: 1px;">
                             </div>
                             <img src="https://cdn.hyderite.dev/img/vscode/css-logo.png"
-                                style="padding: 6px 7px; border-left: #2E3646 1px solid;">
+                                style="padding: 6px 7px; border-left: #2E3646 1px solid;" draggable="false">
                             <span>style.css</span>
                         </div>
                         <div class="file" id="js" title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\js">
@@ -107,28 +107,30 @@
                                 style="border-left: #2E3646 1px solid; height: 22px; margin-right: 12px; margin-left: 1px;">
                             </div>
                             <img src="https://cdn.hyderite.dev/img/vscode/js-logo.png"
-                                style="padding: 6px 7px; border-left: #2E3646 1px solid;">
+                                style="padding: 6px 7px; border-left: #2E3646 1px solid;" draggable="false">
                             <span>script.js</span>
                         </div>
                         <div class="file" id="index-html"
                             title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\index.html">
                             <img src="https://cdn.hyderite.dev/img/vscode/html-logo.png"
-                                style="padding: 6px 7px; border-left: #2E3646 1px solid;">
+                                style="padding: 6px 7px; border-left: #2E3646 1px solid;" draggable="false">
                             <span>index.html</span>
                         </div>
-                        <div class="file" id="index-js"
-                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\index.js">
-                            <img src="https://cdn.hyderite.dev/img/vscode/js-logo.png" style="padding: 6px 7px;">
+                        <div class="file" id="index-js" title="C:\Users\Hyderite\Misc\Projects\Hyderite\index.js">
+                            <img src="https://cdn.hyderite.dev/img/vscode/js-logo.png" style="padding: 6px 7px;"
+                                draggable="false">
                             <span>index.js</span>
                         </div>
                         <div class="file" id="package-lock-json"
-                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\package-lock.json">
-                            <img src="https://cdn.hyderite.dev/img/vscode/json-logo.png" style="padding: 6px 7px;">
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\package-lock.json">
+                            <img src="https://cdn.hyderite.dev/img/vscode/json-logo.png" style="padding: 6px 7px;"
+                                draggable="false">
                             <span>package-lock.json</span>
                         </div>
                         <div class="file" id="package-json"
-                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\package.json">
-                            <img src="https://cdn.hyderite.dev/img/vscode/json-logo.png" style="padding: 6px 7px;">
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\package.json">
+                            <img src="https://cdn.hyderite.dev/img/vscode/json-logo.png" style="padding: 6px 7px;"
+                                draggable="false">
                             <span>package.json</span>
                         </div>
                     </div>
@@ -146,7 +148,27 @@
             </div>
             <div id="code">
                 <img src="https://cdn.hyderite.dev/img/vscode/vscodelogo_dark.png" style="width: 20%; aspect-ratio: 1;"
-                    draggable="false">
+                    draggable="false" id="vscode-logo-dark">
+                <div id="file-selector">
+                    <div class="tab" id="index-html-tab">
+                        <img src="https://cdn.hyderite.dev/img/vscode/html-logo.png"
+                            style="padding: 12px 0; margin-right: 6px;" draggable="false">
+                        index.html
+                        <a href="javascript:" id="close-index-html" class="close-tab">
+                            <img src="https://cdn.hyderite.dev/img/vscode/close-tab.png" draggable="false">
+                        </a>
+                    </div>
+                    <div class="tab" id="style-css-tab">
+                        <img src="https://cdn.hyderite.dev/img/vscode/css-logo.png"
+                            style="padding: 12px 0; margin-right: 6px;" draggable="false">
+                        style.css
+                        <a href="javascript:" id="close-index-css" class="close-tab">
+                            <img src="https://cdn.hyderite.dev/img/vscode/close-tab.png" draggable="false">
+                        </a>
+                    </div>
+                    <img src="https://cdn.hyderite.dev/img/vscode/file_selector_btns.png"
+                        style="cursor: pointer; position: absolute; right: 0;" draggable="false">
+                </div>
             </div>
         </div>
         <div id="bottom-bar">
