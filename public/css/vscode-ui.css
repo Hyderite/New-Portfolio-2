@@ -4,10 +4,23 @@
     background-color: #1C2333;
     color: #DBDFE3;
     font-family: 'Open Sans', sans-serif;
+    user-select: none;
 }
 
 a {
     color: #fff;
+}
+
+.textbox {
+    display: none;
+    position: absolute;
+    background-color: #2E3443;
+    border: #676C77 1px solid;
+    border-radius: 7px;
+    padding: 5px 10px;
+    color: #fff;
+    z-index: 1;
+    user-select: none;
 }
 
 #top-bar {
@@ -103,25 +116,35 @@ a {
 
 #files {
     width: calc(100% - 1px);
-    height: 100%;
+    height: calc(100% - 82px);
     font-size: 11.5px;
     color: #9DA2A6;
     background-color: #2B3245;
-    cursor: pointer;
     transform: translateX(1px);
 }
 
 #outline, #timeline {
     display: flex;
     align-items: center;
-    width: calc(100% - 6px);
+    width: calc(100% - 1px);
     height: 22px;
     font-size: 11.5px;
     color: #9DA2A6;
     background-color: #2B3245;
-    padding-left: 5px; 
     margin-left: 1px; 
     cursor: pointer;
+}
+
+#explorer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+}
+
+#outline:focus, #timeline:focus, #explorer:focus {
+    outline: #0079F2 1px solid;
 }
 
 #outline {
@@ -135,7 +158,7 @@ a {
 
 #files-container {
     width: 241px;
-    height: 100%;
+    height: calc(100% - 21px);
     background-color: #1C2333;
 }
 
@@ -145,6 +168,8 @@ a {
     font-size: 12.5px;
     height: 22px;
     color: #DBDFE3;
+    cursor: pointer;
+    padding-left: 15px;
 }
 
 .file:hover {
@@ -160,11 +185,27 @@ a {
     align-items: center;
 }
 
+#css, #js {
+    padding-left: 27px;
+}
+
+#css-arrow, #js-arrow {
+    border-left: #2E3646 1px solid;
+}
+
+#style-css, #script-js {
+    padding-left: 26px;
+}
+
+#index-html {
+    padding-left: 27px;
+}
+
 #bottom-bar {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 21px;
-    background-color: #68217A;
+    background-color: #0079F2;
     border-top: #0E1525 1px solid;
 }

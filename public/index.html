@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <div class="textbox"></div>
     <div id="vscode-ui">
         <div id="top-bar">
             <img src="https://cdn.hyderite.dev/img/vscode/vscode.png" title="vscode" alt="vscode" id="vscode-logo"
@@ -60,36 +61,84 @@
         <div id="main">
             <div id="file-bar">
                 <div
-                    style="display: flex; align-items: center; width: calc(100% - 20px - 10px); height: 35px; transform: translateY(1px); font-size: 11px; color: #bbbbbb; margin-left: 20px; margin-right: 10px;">
-                    <span style="cursor: default; margin: 0;" title="Explorer (Ctrl+Shift+E)">EXPLORER</span>
+                    style="display: flex; align-items: center; width: calc(100% - 20px - 10px); height: 35px; transform: translateY(1px); font-size: 11px; color: #bbbbbb; margin-right: 10px;">
+                    <span style="cursor: default; margin: 0; margin-left: 20px;"
+                        title="Explorer (Ctrl+Shift+E)">EXPLORER</span>
                     <span class="material-symbols-outlined" id="three-dots"
                         title="Views and More Actions...">more_horiz</span>
                 </div>
-                <div id="files">
-                    <div
-                        style="display: flex; flex-direction: row; align-items: center; justify-content: left; margin-left: 6px;">
+                <div id="files" tabindex="100">
+                    <div id="explorer" tabindex="1">
                         <span class="material-symbols-outlined">stat_minus_1</span>
                         <span style="font-weight: bold; transform: translateY(-1px);" title="Hyderite">HYDERITE</span>
                         <img src="https://cdn.hyderite.dev/img/vscode/explorer-btns.png" id="explorer-btns"
                             draggable="false" style="transform: translateY(-1px);">
                     </div>
                     <div id="files-container">
-                        <div class="file" style="margin-top: -2px;">
+                        <div class="file" id="node-modules" style="margin-top: -2px;"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\node_modules">
                             <span class="material-symbols-outlined">chevron_right</span>
-                            <span title="C:\Users\Hyderite\Misc\Projects\Hyderite\node_modules">node_modules</span>
+                            <span>node_modules</span>
                         </div>
-                        <div class="file">
-                            <span class="material-symbols-outlined">stat_minus_1</span>
-                            <span title="C:\Users\Hyderite\Misc\Projects\Hyderite\public">public</span>
+                        <div class="file" id="public" title="C:\Users\Hyderite\Misc\Projects\Hyderite\public">
+                            <span class="material-symbols-outlined" id="public-arrow">stat_minus_1</span>
+                            <span>public</span>
+                        </div>
+                        <div class="file" id="css" title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\css">
+                            <span class="material-symbols-outlined" id="css-arrow">stat_minus_1</span>
+                            <span>css</span>
+                        </div>
+                        <div class="file" id="style-css"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\css\style.css">
+                            <div
+                                style="border-left: #2E3646 1px solid; height: 22px; margin-right: 12px; margin-left: 1px;">
+                            </div>
+                            <img src="https://cdn.hyderite.dev/img/vscode/css-logo.png"
+                                style="padding: 6px 7px; border-left: #2E3646 1px solid;">
+                            <span>style.css</span>
+                        </div>
+                        <div class="file" id="js" title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\js">
+                            <span class="material-symbols-outlined" id="js-arrow">stat_minus_1</span>
+                            <span>js</span>
+                        </div>
+                        <div class="file" id="script-js"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\js\script.js">
+                            <div
+                                style="border-left: #2E3646 1px solid; height: 22px; margin-right: 12px; margin-left: 1px;">
+                            </div>
+                            <img src="https://cdn.hyderite.dev/img/vscode/js-logo.png"
+                                style="padding: 6px 7px; border-left: #2E3646 1px solid;">
+                            <span>script.js</span>
+                        </div>
+                        <div class="file" id="index-html"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\index.html">
+                            <img src="https://cdn.hyderite.dev/img/vscode/html-logo.png"
+                                style="padding: 6px 7px; border-left: #2E3646 1px solid;">
+                            <span>index.html</span>
+                        </div>
+                        <div class="file" id="index-js"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\index.js">
+                            <img src="https://cdn.hyderite.dev/img/vscode/js-logo.png" style="padding: 6px 7px;">
+                            <span>index.js</span>
+                        </div>
+                        <div class="file" id="package-lock-json"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\package-lock.json">
+                            <img src="https://cdn.hyderite.dev/img/vscode/json-logo.png" style="padding: 6px 7px;">
+                            <span>package-lock.json</span>
+                        </div>
+                        <div class="file" id="package-json"
+                            title="C:\Users\Hyderite\Misc\Projects\Hyderite\public\package.json">
+                            <img src="https://cdn.hyderite.dev/img/vscode/json-logo.png" style="padding: 6px 7px;">
+                            <span>package.json</span>
                         </div>
                     </div>
                 </div>
                 <div style="position: absolute; bottom: 0; width: 242px;">
-                    <div id="outline">
+                    <div id="outline" tabindex="1">
                         <span class="material-symbols-outlined">chevron_right</span>
                         <span style="font-weight: bold; transform: translateY(-1px);" title="Outline">OUTLINE</span>
                     </div>
-                    <div id="timeline">
+                    <div id="timeline" tabindex="1">
                         <span class="material-symbols-outlined">chevron_right</span>
                         <span style="font-weight: bold; transform: translateY(-1px);" title="Timeline">TIMELINE</span>
                     </div>
