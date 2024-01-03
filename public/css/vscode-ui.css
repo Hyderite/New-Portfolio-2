@@ -233,12 +233,17 @@ a {
 }
 
 #index-html-tab {
+    display: none;
     transform: translate(1px, 1px);
 }
 
 #style-css-tab {
     display: none;
     transform: translate(-3px, 1px);
+}
+
+#script-js-tab {
+    display: none;
 }
 
 .close-tab {

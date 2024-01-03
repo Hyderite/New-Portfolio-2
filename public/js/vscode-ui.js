@@ -23,7 +23,7 @@ window.addEventListener('click', function (e) {
 });
 
 document.querySelector("#node-modules").onclick = function (e) {
-    var textbox = document.querySelector(".textbox");
+    var textbox = document.querySelector("#textbox");
     var offset = textbox.parentElement.getBoundingClientRect();
     var tipDist = 15;
     textbox.innerHTML = "What are you trying to do?";
@@ -82,7 +82,7 @@ document.querySelector("#js").onclick = function () {
 };
 
 document.querySelector("#package-json").onclick = function (e) {
-    var textbox = document.querySelector(".textbox");
+    var textbox = document.querySelector("#textbox2");
     var offset = textbox.parentElement.getBoundingClientRect();
     var tipDist = 15;
     textbox.innerHTML = "This is a json file. We don't have to change its contents for now.";
@@ -95,7 +95,7 @@ document.querySelector("#package-json").onclick = function (e) {
 };
 
 document.querySelector("#package-lock-json").onclick = function (e) {
-    var textbox = document.querySelector(".textbox");
+    var textbox = document.querySelector("#textbox3");
     var offset = textbox.parentElement.getBoundingClientRect();
     var tipDist = 15;
     textbox.innerHTML = "This is a json file. We don't have to change its contents for now.";
@@ -107,49 +107,61 @@ document.querySelector("#package-lock-json").onclick = function (e) {
     }, 5000);
 };
 
-document.querySelector("#style-css").onclick = function () {
-    document.querySelector("#style-css").style.backgroundColor = "#2B3245";
-    document.querySelector("#index-html").style.backgroundColor = "#1C2333";
-    document.querySelector("#script-js").style.backgroundColor = "#1C2333";
-    document.querySelector("#index-js").style.backgroundColor = "#1C2333";
-    document.querySelector("#index-html-tab").style.backgroundColor = "#0E1525";
-    document.querySelector("#index-html-tab").style.transform = "translateX(1px)";
-    document.querySelector("#style-css-tab").style.display = "inline-flex";
-    document.querySelector("#code").style.justifyContent = "normal";
-    document.querySelector("#code").style.alignItems = "normal";
-    document.querySelector("#vscode-logo-dark").style.display = "none";
-    document.querySelector("#file-selector").style.display = "block";
-};
-
-document.querySelector("#script-js").onclick = function () {
-    document.querySelector("#style-css").style.backgroundColor = "#1C2333";
-    document.querySelector("#index-html").style.backgroundColor = "#1C2333";
-    document.querySelector("#script-js").style.backgroundColor = "#2B3245";
-    document.querySelector("#index-js").style.backgroundColor = "#1C2333";
-    document.querySelector("#code").style.justifyContent = "normal";
-    document.querySelector("#code").style.alignItems = "normal";
-    document.querySelector("#vscode-logo-dark").style.display = "none";
-    document.querySelector("#file-selector").style.display = "block";
-};
+var fileSelector = document.querySelector("#file-selector");
 
 document.querySelector("#index-html").onclick = function () {
-    document.querySelector("#index-html").style.backgroundColor = "#2B3245";
-    document.querySelector("#style-css").style.backgroundColor = "#1C2333";
-    document.querySelector("#script-js").style.backgroundColor = "#1C2333";
-    document.querySelector("#index-js").style.backgroundColor = "#1C2333";
-    document.querySelector("#code").style.justifyContent = "normal";
-    document.querySelector("#code").style.alignItems = "normal";
-    document.querySelector("#vscode-logo-dark").style.display = "none";
-    document.querySelector("#file-selector").style.display = "block";
+    fileSelector.style.display = "block";
+    document.querySelector("#index-html-tab").style.display = "block";
 };
 
-document.querySelector("#index-js").onclick = function () {
-    document.querySelector("#style-css").style.backgroundColor = "#1C2333";
-    document.querySelector("#index-html").style.backgroundColor = "#1C2333";
-    document.querySelector("#script-js").style.backgroundColor = "#1C2333";
-    document.querySelector("#index-js").style.backgroundColor = "#2B3245";
-    document.querySelector("#code").style.justifyContent = "normal";
-    document.querySelector("#code").style.alignItems = "normal";
-    document.querySelector("#vscode-logo-dark").style.display = "none";
-    document.querySelector("#file-selector").style.display = "block";
+if (fileSelector.style.display = "none") {
+    document.querySelector("#style-css").onclick = function (e) {
+        var textbox = document.querySelector("#textbox4");
+        var offset = textbox.parentElement.getBoundingClientRect();
+        var tipDist = 15;
+        textbox.innerHTML = "We'll edit this file later.";
+        textbox.style.top = (e.clientY - offset.top + tipDist) + 'px';
+        textbox.style.left = (e.clientX - offset.left + tipDist) + 'px';
+        textbox.style.display = "block";
+        setTimeout(function () {
+            textbox.style.display = "none";
+        }, 2500);
+    };
+
+    document.querySelector("#script-js").onclick = function (e) {
+        var textbox = document.querySelector("#textbox5");
+        var offset = textbox.parentElement.getBoundingClientRect();
+        var tipDist = 15;
+        textbox.innerHTML = "We'll edit this file later.";
+        textbox.style.top = (e.clientY - offset.top + tipDist) + 'px';
+        textbox.style.left = (e.clientX - offset.left + tipDist) + 'px';
+        textbox.style.display = "block";
+        setTimeout(function () {
+            textbox.style.display = "none";
+        }, 2500);
+    };
+} else if (document.querySelector("#index-html-tab").style.display == "block") {
+    document.querySelector("#style-css").onclick = function () {
+        alert("it's working");
+        document.querySelector("#style-css-tab").style.display = "block";
+    };
+
+    document.querySelector("#script-js").onclick = function (e) {
+        var textbox = document.querySelector("#textbox5");
+        var offset = textbox.parentElement.getBoundingClientRect();
+        var tipDist = 15;
+        textbox.innerHTML = "We'll edit this file later.";
+        textbox.style.top = (e.clientY - offset.top + tipDist) + 'px';
+        textbox.style.left = (e.clientX - offset.left + tipDist) + 'px';
+        textbox.style.display = "block";
+        setTimeout(function () {
+            textbox.style.display = "none";
+        }, 2500);
+    };
+} else if (document.querySelector("#style-css").style.display = "block") {
+    document.querySelector("#script-js").onclick = function () {
+        document.querySelector("#script-js-tab").style.display = "block";
+    };
 };
+
+
